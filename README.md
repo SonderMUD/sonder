@@ -1,41 +1,52 @@
-# Welcome to Evennia!
+# Sonder: An Interactive Multi-User Novel
 
-This is your game directory, set up to let you start with
-your new game right away. An overview of this directory is found here:
-https://github.com/evennia/evennia/wiki/Directory-Overview#the-game-directory
+Table of Contents (use ctrl+f to navigate)
 
-You can delete this readme file when you've read it and you can
-re-arrange things in this game-directory to suit your own sense of
-organisation (the only exception is the directory structure of the
-`server/` directory, which Evennia expects). If you change the structure
-you must however also edit/add to your settings file to tell Evennia
-where to look for things.
+1. Design Philosophy
+2. Briarport
+3. Systems
+	3a. Stats
+	3b.
 
-Your game's main configuration file is found in
-`server/conf/settings.py` (but you don't need to change it to get
-started). If you just created this directory (which means you'll already
-have a `virtualenv` running if you followed the default instructions),
-`cd` to this directory then initialize a new database using
 
-    evennia migrate
+3a. Stats
+	Stats are rated on a scale of 1-5 for ordinary character objects. They are rated 5-10 for supernatural character objects. Every attribute starts out with one point in it.
+	1 = Poor. Unexercised, unpracticed or inept.
+	2 = Average. The result of occasional effort or application.
+	3 = Good. Regular practice or effort, or naturally talented.
+	4 = Exceptional. Frequently applied, tested and honed, or naturally gifted.
+	5 = Outstanding. The peak of normal human capability. Continuously exercised or naturally blessed.
 
-To start the server, stand in this directory and run
+Groups:
+Int, Wis, Res = Mental
+Str, Dex, Sta = Physical
+Pre, Man, Com = Social
+New characters have a split of 5/4/3 points to assign to these groups.
 
-    evennia start
 
-This will start the server, logging output to the console. Make
-sure to create a superuser when asked. By default you can now connect
-to your new game using a MUD client on `localhost`, port `4000`.  You can 
-also log into the web client by pointing a browser to
-`http://localhost:8000`.
+Intelligence (self.db.intelligence)
+	Cognitive ability, the power of the mind, memory, and book-smarts. Valued among scholars, theorists, and leaders.
 
-# Getting started
+Wits (self.db.wits)
+	Street smarts! To think on your feet and act under pressure, you need wits. A favorite for lawyers, entrepreneurs, and tacticians.
+	
+Resolve (self.db.resolve)
+	Ongoing focus, staying on target, the capacity to ignore distractions. Defense of the mind. Important to leaders, motivators, soldiers, and athletes.
 
-From here on you might want to look at one of the beginner tutorials:
-http://github.com/evennia/evennia/wiki/Tutorials.
+Strength (self.db.strength)
+	Physical might, muscle mass, effects anything that uses brawn or might. Instrumental to thugs, athletes, and brawlers.
 
-Evennia's documentation is here: 
-https://github.com/evennia/evennia/wiki.
+Dexterity (self.db.dexterity)
+	Quickness, response time, finesse. Valuable to criminals, surgeons, and dancers alike.
 
-Enjoy!
-"# sonder" 
+Stamina (self.db.stamina)
+	How fast can you run? How much wood can you chop? It’s the difference between sick and frail, or hardy and healthy. Critical to athletes, survivalists, and heavy lifters.
+
+Presence (self.db.presence)
+	Attractiveness is only half the battle: this is your stage presence, your assertiveness, your bearing on the room. Can you control the crowd? Essential for models, rockstars, and salespeople.
+
+Manipulation (self.db.manipulation)
+	Your capacity to pull on the strings of others, using their emotions and needs to your own advantage, whether that be through a charming smile or an appeal to their heart. Vital for politicians, publicists, and cons.
+
+Composure (self.db.composure)
+	Are you calm and poised? You’d want to invest in composure. It’s the ability to remain cool in the face of stress, to resist pressure and social influence, whether they be internal or external. Ideal among leaders, soldiers, and anyone exposed to high levels of stress.
